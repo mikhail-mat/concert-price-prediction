@@ -9,5 +9,7 @@ What I worked on:
 - Trained and compared plain linear, polynomial, and ridge-regularised versions of both.
 
 What I learned:
+
 The dataset had more features than training examples, so unregularised polynomial regression overfit catastrophically. Ridge regularisation turned what looked like an unusable model into one making reasonable predictions, a striking demonstration that the right technique can make a problem possible to solve even when the data seems against you.
+
 Learning about log transforms and ridge regularisation showed me that simple techniques can make a big difference, and that an approach not working often just means there's a better one I haven't tried yet.
