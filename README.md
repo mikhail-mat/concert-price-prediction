@@ -1,12 +1,13 @@
 # concert-price-prediction
-This is my first real project in Machine Learning, and it's linear and polynomial regression using data from this repo: https://github.com/AinaFih/Concerts_Dataset-Project. It contains simulated concert data such as artists, genres, performances, and pricing. My model predicts ticket prices given input features mentioned above.
 
-This project helped me learn about data manipulation and preprocessing with pandas, and the importance of encoding your data, e.g. transforming data with logarithmic functions for reduced variance and identifying potential exponential relationships in the data, one-hot-encoding for categorical features, cyclical encoding with trigonometric functions for dates.
+My first end-to-end machine learning project: predicting concert ticket prices from features like artist, genre, performance details, and date using linear, polynomial, and ridge regression. Dataset from AinaFih/Concerts_Dataset-Project - simulated concert data.
 
-I also learned about visualising data with matplotlib and identifying outliers in the data this way.
+What I worked on:
+- Data preprocessing in pandas: log transforms to reduce skew and linearise multiplicative relationships, one-hot encoding for categorical features, and cyclical (sin/cos) encoding for dates so the model treats December and January as adjacent.
+- Exploratory analysis and outlier identification with matplotlib.
+- Implemented k-fold cross-validation manually from the theoretical definition, then used it to compare models and tune the ridge regression alpha.
+- Trained and compared plain linear, polynomial, and ridge-regularised versions of both.
 
-I learned about cross-validation and implemented it manually after learning about the theoretical concept for comparing performance of different models and finding the best 'alpha' for ridge regression.
-
-Most importantly, I learned how ridge regularization can transform a horrible model that overfits a very small set of training data into a model that can make decent predictions. Ridge regression can even help make predictions when the number of features in your data exceeds the number of training examples, which was my case exactly!
-
-This project is a learning lesson for me about the importance of good data and its size. I was ready to give this project up after I got bad results and thought it was pointless; however, learning about new concepts such as log transforms and ridge regularization showed me that there are simple but powerful techniques in ML making what seems impossible from one point-of-view possible from another.
+What I learned:
+The dataset had more features than training examples, so unregularised polynomial regression overfit catastrophically. Ridge regularisation turned what looked like an unusable model into one making reasonable predictions, a striking demonstration that the right technique can make a problem possible to solve even when the data seems against you.
+Learning about log transforms and ridge regularisation showed me that simple techniques can make a big difference, and that an approach not working often just means there's a better one I haven't tried yet.
